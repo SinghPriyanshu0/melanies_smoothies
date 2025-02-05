@@ -13,6 +13,8 @@ st.write(
 
 cnx=st.connection('snowflake')
 
+search_on=pd_df.loc[pd_df["FRUIT_NAME"]== fruit_choosen,'SEARCH_ON'].Iloc[0]
+st.write('The search value for ',fruit_choosen,'is',search_on,'.')
 
 name_on_order = st.text_input("Name on Smoothie")
 st.write("The name of your smoothie is ", name_on_order)
